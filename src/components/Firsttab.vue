@@ -93,7 +93,106 @@
     </div>
     <!-- 推荐面板 -->
     <div v-if="show1">
-      45
+      <!-- 圆形图标 -->
+      <div class="container">
+        <div class="box">
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+          <div class="circle">
+            <img src="../assets/anli.png" alt />
+            <p>案例</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 推荐页主要内容 -->
+      <div class="r-usershow">
+        <div class="r-show">
+
+          <div class="usershow-item">
+            <img src="../assets/userphoto.jpeg" alt="">
+            <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
+            <div class="praise">
+              <div class="user-img">
+                <img src="../assets/userphoto.jpeg" alt="">
+                <span class="my-small">Leo</span>
+              </div>
+              <div class="star">
+                <img src="../assets/star.png" alt="">
+                <span class="my-small">123</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="usershow-item">
+            <img src="../assets/usershow.png" alt="">
+            <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
+            <div class="praise">
+              <div class="user-img">
+                <img src="../assets/userphoto.jpeg" alt="">
+                <span class="my-small">Leo</span>
+              </div>
+              <div class="star">
+                <img src="../assets/star.png" alt="">
+                <span class="my-small">123</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="r-show">
+          <div class="usershow-item">
+            <img src="../assets/usershow.png" alt="">
+            <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
+            <div class="praise">
+              <div class="user-img">
+                <img src="../assets/userphoto.jpeg" alt="">
+                <span class="my-small">Leo</span>
+              </div>
+              <div class="star">
+                <img src="../assets/star.png" alt="">
+                <span class="my-small">123</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="usershow-item">
+            <img src="../assets/userphoto.jpeg" alt="">
+            <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
+            <div class="praise">
+              <div class="user-img">
+                <img src="../assets/userphoto.jpeg" alt="">
+                <span class="my-small">Leo</span>
+              </div>
+              <div class="star">
+                <img src="../assets/star.png" alt="">
+                <span class="my-small">123</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- 收藏夹 -->
     <div v-if="show2">456789</div>
@@ -267,32 +366,82 @@ export default {
 .blackline {
   border-bottom: 3px solid #000;
 }
- .container {
-      width:100%;
-      white-space: nowrap;
-      max-width: 1200px;
-      min-width: 375px;
-    }
-  .box{
-    white-space: nowrap;
-    overflow-x: auto;
-    padding:0.5rem 1rem;
-  }
-    .box::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-      display: none;
-    }
+.container {
+  width: 100%;
+  white-space: nowrap;
+  max-width: 1200px;
+  min-width: 375px;
+}
+.box {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+}
+.box::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
 
-    .cube {
-      display: inline-block;
-      text-align: center;
-      height: 100px;
-      width: 200px;
-      background: #f00;
-      margin-top: 0.5rem;
-    }
-    .box>.cube:not(:first-child){
-      margin-left:1rem;
-    }
+.cube {
+  display: inline-block;
+  text-align: center;
+  height: 100px;
+  width: 200px;
+  background: #f00;
+  margin-top: 0.5rem;
+}
+.box > .cube:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.circle {
+  display: inline-block;
+  text-align: center;
+  margin-top: 0.5rem;
+  border-radius: 100%;
+}
+.box > .circle:not(:first-child) {
+  margin-left: 1rem;
+}
+.circle > img {
+  width: 3.6rem;
+}
+.r-usershow{
+  display: flex;
+  padding:1rem;
+  justify-content: space-between;
+  border-top:1px solid #e9e9e9;
+}
+.r-show{
+  width:49%;
+}
+.usershow-item{
+  margin-bottom:1rem;
+}
+.usershow-item>img{
+  width:100%;
+}
+.user-title{
+  font:0.8rem 苹方-简;
+  max-height:3rem;
+  padding:0.5rem 0;
+  overflow: hidden;
+}
+.praise{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-img>img{
+  width:1.3rem;
+  border-radius:100%;
+  margin-right:5px;
+}
+.my-small{
+  font:0.8rem 苹方-简;
+}
+.star>img{
+  width:1rem;
+}
 </style>
