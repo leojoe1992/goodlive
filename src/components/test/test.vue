@@ -1,22 +1,19 @@
 <template>
   <div>
-    <button v-for="i of 5" :key="i" @click="say(i)">我是{{i}}</button>
+    	<swiper>
+<swiper-slide>Slide 1</swiper-slide>
+<swiper-slide>Slide 2</swiper-slide>
+<swiper-slide>Slide 3</swiper-slide>
+</swiper>
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-     
-    };
-  },
-  methods:{
-    say(i){
-      alert("我是"+i+"号")
-    }
-  }
-};
+export default {};
 </script>
-<style scoped>
-  
+<style>
+  .swiper-slide{
+    display: block;
+    height:200px !important;
+    background:forestgreen;
+  }
 </style>
