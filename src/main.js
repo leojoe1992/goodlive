@@ -29,6 +29,15 @@ import './lib/mui/css/mui.css'
 // 还需要加载图标字体文件
 import './lib/mui/css/icons-extra.css'
 
+//配置axios
+import axios from "axios"
+// 配置请求时保存session信息
+axios.defaults.withCredentials==true;
+// 基础路径
+axios.defaults.baseURL="http://127.0.0.1:8080/"
+// 注册
+Vue.prototype.axios=axios;
+
 new Vue({
   router,
   render: h => h(App)

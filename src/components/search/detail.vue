@@ -21,12 +21,26 @@ export default {
   data() {
     return {
       current: 0,
-      list:[]
+      list:[],
+      id:"",
+      detail:""
     };
   },
   methods: {
     onChange(index) {
       this.current = index;
+    },
+    // 获取商品详情数据
+    getDetail(e){
+      // 路径url
+      var url="detail";
+      //商品id
+      var id=this.id;
+      this.axios.get(url,{pramas:{id}})
+      .then(res=>{
+        console.log(res);
+        this.detail=res.data.data;
+      })
     }
   }
 };

@@ -13,7 +13,7 @@
 			</div>
 		</div>
 		<!-- 商品列表 -->
-		<list></list>
+		<list :p="index"></list>
 		
   </van-tab>
 </van-tabs>
@@ -29,7 +29,8 @@ import list from "./search_list.vue"
 			return{
 				active:3,
 				list:["全部","沙发","床","桌子","柜子","茶几","架子","椅子","凳子","屏风"],
-				show:"default"
+				show:"default",
+				p:[]
 			}
 		},
 		methods: {
@@ -49,6 +50,7 @@ import list from "./search_list.vue"
 				}
 				console.log(e.target.dataset)
 			},
+
 		},
 		
 	}

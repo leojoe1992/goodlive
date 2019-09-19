@@ -1,6 +1,6 @@
 <template>
 		<div class="shop_list">
-			<div class="list_item" v-for="i of 10" :key=i>{{i}}</div>
+			<div class="list_item" v-for="i in products" :key=i>{{i}}</div>
 
 		</div>
 </template>
@@ -8,10 +8,27 @@
 	export default{
 		data(){
 			return {
-
+				products:[]
 			}
 		},
-		props:[]
+		props:["p"],
+		methods: {
+			// 获取商品列表
+			search(e){
+				console.log(e);
+				var url="search";
+				var data={data:e}
+				// 发送ajax请求
+				this.axios.get(url,{params:data})
+				.then(res=>{
+					console.log(res);
+					this.products=res.data.data;
+				})
+			}
+		},
+		created() {
+			this.search(this.p);
+		},
 	}
 
 </script>
