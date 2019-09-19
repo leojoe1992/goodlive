@@ -1,19 +1,26 @@
 <template>
   <div>
-    	<swiper>
-<swiper-slide>Slide 1</swiper-slide>
-<swiper-slide>Slide 2</swiper-slide>
-<swiper-slide>Slide 3</swiper-slide>
-</swiper>
+    <div class="container">
+      <div class="item" v-for="i of 9" :key="i"></div>
+    </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  
+}
 </script>
-<style>
-  .swiper-slide{
-    display: block;
-    height:200px !important;
-    background:forestgreen;
+<style scoped>
+  .container{
+    background:#eee;
+    padding:1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .item{
+    height:100px;
+    width:48%;
+    background:black;
   }
 </style>

@@ -44,52 +44,15 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci earum quaerat saepe illum, dignissimos ex.beatae fugit.</p>
         </div>
         <div class="userphotoblog">
-          <div class="leftphoto">
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
+          <div class="user-photo">
+            <img v-for="i of 5" :key="i" src="../assets/userphoto.jpeg" alt />
+            
           </div>
-          <div class="middlephoto">
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-          </div>
-          <div class="rightphoto">
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-          </div>
+         
         </div>
       </div>
 
-      <div class="usershows">
-        <div class="userinfo">
-          <img class="userphoto" src="../assets/userphoto.jpeg" alt />
-          <img class="vipphoto" src="../assets/vip.png" alt />
-          <span class="username">面对疾风吧</span>
-          <img class="follow" @click="follow1" :src="follow" alt />
-        </div>
-        <div class="userblog">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci earum quaerat saepe illum, dignissimos ex.beatae fugit.</p>
-        </div>
-        <div class="userphotoblog">
-          <div class="leftphoto">
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-          </div>
-          <div class="middlephoto">
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-          </div>
-          <div class="rightphoto">
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-            <img src="../assets/userphoto.jpeg" alt />
-          </div>
-        </div>
-      </div>
+      
     </div>
     <!-- 推荐面板 -->
     <div v-if="show1">
@@ -195,7 +158,23 @@
       </div>
     </div>
     <!-- 收藏夹 -->
-    <div v-if="show2">456789</div>
+    <div v-if="show2" class="favorite">
+      <div class="card-item" v-for="i of 6" :key="i">
+        <img class="card-img" src="../assets/usershow.png" alt="">
+        <span class="my-small">56个灵感</span>
+        <p class="comment-font">Lorem ipsum dolor sit ame Similique iste odio neam commodi quas adipisci eos, assumenda recusandae?</p>
+        <div class="praise margin-top-small">
+              <div class="user-img">
+                <img src="../assets/userphoto.jpeg" alt="">
+                <span class="my-small">Leo</span>
+              </div>
+              <div class="star">
+                <img src="../assets/favorite.png" alt="">
+                <span class="my-small">收藏夹</span>
+              </div>
+            </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -322,14 +301,15 @@ export default {
   height: 25px;
 }
 
-.userphotoblog {
+
+.user-photo{
   display: flex;
   justify-content: space-between;
-}
-.userphotoblog > div:not(:first-child) {
-  margin-left: 0.4rem;
+  flex-wrap: wrap;
 }
 .userphotoblog img {
+  height:33%;
+  width:33%;
   margin-bottom: 0.4rem;
 }
 .usershows {
@@ -443,5 +423,34 @@ export default {
 }
 .star>img{
   width:1rem;
+}
+.favorite{
+  background:#f5f5f5;
+  padding:1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.card-item{
+  width:49%;
+  height:260px;
+  background:white;
+  margin-bottom:0.5rem;
+  padding:0.5rem;
+}
+.card-img{
+  height:150px;
+  width:100%;
+  object-fit: cover;
+}
+.comment-font{
+  font-size:14px;
+  color:#000;
+  margin:0;
+  height:38px;
+  overflow: hidden;
+}
+.margin-top-small{
+  margin-top:10px;
 }
 </style>
