@@ -356,6 +356,8 @@ export default {
 }
 .blackline {
   border-bottom: 3px solid #000;
+  color: #000 !important;
+  font-weight: bold !important;
 }
 .container {
   width: 100%;
