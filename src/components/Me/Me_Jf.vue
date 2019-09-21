@@ -165,6 +165,7 @@ h3{
   border:1px solid #ddd;
   margin-top: 0.5rem;
 }
+
 /*除了第一个box 其余的都作用*/
 .boxs > .box:not(:first-child) {
 	margin-left:1rem;

@@ -31,7 +31,7 @@
 						 <img src="@/assets/Me_JT2.png" alt="">
 					</div>
 				</div>
-				
+
 			</div>
 			<div class="Me_gFlex">
 					<div class="Me_gFlex2">
@@ -71,6 +71,7 @@ export default {
 		},
 	}
 }
+
 </script>
 <style scoped>
 /*图片大小*/
@@ -96,6 +97,7 @@ export default {
 	 width: 280px;
 	 text-align:center;
  }
+ 
  ul>li{
 	 font-size: 1.3rem;
 	 margin-top:0.5rem;
