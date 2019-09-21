@@ -100,8 +100,6 @@
 
       <!-- 推荐页主要内容 -->
       <div class="r-usershow">
-        <div class="r-show">
-
           <div class="usershow-item">
             <img src="../assets/userphoto.jpeg" alt="">
             <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
@@ -131,38 +129,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="r-show">
-          <div class="usershow-item">
-            <img src="../assets/usershow.png" alt="">
-            <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
-            <div class="praise">
-              <div class="user-img">
-                <img src="../assets/userphoto.jpeg" alt="">
-                <span class="my-small">Leo</span>
-              </div>
-              <div class="star">
-                <img src="../assets/star.png" alt="">
-                <span class="my-small">123</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="usershow-item">
-            <img src="../assets/userphoto.jpeg" alt="">
-            <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
-            <div class="praise">
-              <div class="user-img">
-                <img src="../assets/userphoto.jpeg" alt="">
-                <span class="my-small">Leo</span>
-              </div>
-              <div class="star">
-                <img src="../assets/star.png" alt="">
-                <span class="my-small">123</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        
       </div>
     </div>
     <!-- 收藏夹 -->
@@ -414,11 +382,10 @@ export default {
   justify-content: space-between;
   border-top:1px solid #e9e9e9;
 }
-.r-show{
-  width:49%;
-}
+
 .usershow-item{
   margin-bottom:1rem;
+  width:48%;
 }
 .usershow-item>img{
   width:100%;
