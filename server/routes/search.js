@@ -3,13 +3,17 @@ const router=express.Router();
 const pool=require("../pool");
 
 router.get("/",(req,res)=>{
-	console.log(req.query)
-	var list=[];
+	console.log(req.query.data);
 	var data=req.query.data;
-	for(var i=0;i<10;i++){
-		list[i]=data+i
-	}
-	res.send({code:1,msg:"OK",data:list});
+	data=data=="全部"?"":data=="沙发"?10:data=="床"?20:data=="桌子"?10:data=="柜子"?20:data=="茶几"?10:20;
+	var sql=data==""?"select pid,pname,price,brand,spec,detail,img from product_list":"select pid,pname,price,brand,spec,detail,img,imgs from product_list where familyId = ?";
+	pool.query(sql,data,(err,result)=>{
+		if(err) console.log(err);
+		console.log(result.length
+		)
+		res.send({code:1,msg:"查询成功",data:result});
+	});
+	
 	
 })
 module.exports=router;

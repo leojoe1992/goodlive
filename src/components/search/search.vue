@@ -12,11 +12,11 @@
 				筛选
 			</div>
 		</div>
-		<!-- 商品列表 -->
+		<!-- 商品列表 -->	
 		<list :p="index"></list>
-		
   </van-tab>
 </van-tabs>
+
 	</div>
 </template>
 <script>
@@ -27,7 +27,7 @@ import list from "./search_list.vue"
 		},
 		data(){
 			return{
-				active:3,
+				active:0,
 				list:["全部","沙发","床","桌子","柜子","茶几","架子","椅子","凳子","屏风"],
 				show:"default",
 				p:[]

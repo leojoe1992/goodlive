@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="item" v-for="i of 9" :key="i"></div>
+      <div class="item" v-for="i of 15" :key="i"></div>
     </div>
   </div>
 </template>
