@@ -20,4 +20,4 @@ app.use(express.static('public'));
 
 // 挂载路由
 app.use("/search",search);
-app.use("/detail",)
+app.use("/detail",detail)
