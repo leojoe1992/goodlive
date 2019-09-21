@@ -3,7 +3,7 @@
 	  <!-- 导航栏tableBar -->
 		<div class="page-head">
       <div>
-        <router-link :to="'/'" >
+        <router-link :to="'/MeG'" >
        <img :src="fristImg" alt="">
        </router-link>
       </div>
