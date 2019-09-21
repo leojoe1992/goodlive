@@ -7,15 +7,17 @@ import Productslist from "./components/products/Productslist.vue"
 import Home from "./components/Home.vue"
 import Decoration from "./components/Decoration.vue"
 import Mine from "./components/Mine.vue"
-import search from "./components/search/search.vue"
-import searchAll from "./components/search/searchAll.vue"
-import detail from "./components/search/detail.vue"
+
+//Me订单
+import Me from "./components/Me/Me"
+import MeDing from "./components/Me/MeDing"
+import MeJF from "./components/Me/Me_Jf"
 Vue.use(Router)
 export default new Router({
   routes: [
-    {path:'/detail',component:detail},
-    {path:'/searchAll',component:searchAll},
-    {path:'/search',component:search},
+    {path:'/MeJF',component:MeJF},
+    {path:'/Me',component:Me},
+    {path:'/MeD',component:MeDing},
     {path:'/test',component:test},
     {path:'/',component:Home},
     {path:'/mine',component:Mine},
