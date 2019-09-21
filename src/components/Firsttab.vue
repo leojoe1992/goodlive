@@ -34,22 +34,29 @@
           <div class="cube"></div>
         </div>
       </div>
-      <div class="usershows">
+      <div class="usershows" v-for="i of 3" :key="i">
         <div class="userinfo">
           <img class="userphoto" src="../assets/userphoto.jpeg" alt />
           <img class="vipphoto" src="../assets/vip.png" alt />
           <span class="username">面对疾风吧</span>
-          <img class="follow" @click="follow1" :src="follow" alt />
+          <img class="follow" data-index="0" @click="follow1" src="../assets/follow.png" alt />
+          <img class="follow1" data-index="1" @click="follow1" src="../assets/hasfollowed.png" alt="">
         </div>
         <div class="userblog">
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci earum quaerat saepe illum, dignissimos ex.beatae fugit.</p>
         </div>
         <div class="userphotoblog">
           <div class="user-photo">
-            <img v-for="i of 5" :key="i" src="../assets/userphoto.jpeg" alt />
-            
+            <img v-for="i of 6" :key="i" src="../assets/userphoto.jpeg" alt />
           </div>
-         
+          <div class="comment">
+            <div class="share-btn"><img src="../assets/share.png" alt=""></div>
+            <div class="r-comment">
+              <img src="../assets/comment.png" alt="">
+              <img src="../assets/star.png" alt="">
+              <img src="../assets/zan.png" alt="">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -176,13 +183,13 @@
             </div>
       </div>
     </div>
+    <div class="space1"></div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      follow: require("../assets/follow.png"),
       active: 0,
       show: true,
       show1: false,
@@ -209,13 +216,20 @@ export default {
       }
     },
 
-    follow1() {
-      if (this.follow == require("../assets/follow.png")) {
-        this.follow = require("../assets/hasfollowed.png");
-      } else {
-        this.follow = require("../assets/follow.png");
+    follow1(e) {
+      var btn1=e.target;
+      var btn2=btn1.nextElementSibling;
+      if(btn1.dataset.index==0){
+      if(btn1.className=="follow"){
+        btn1.className="follow1";
+        btn2.className="follow";
       }
+    }else if(btn1.dataset.index==1){
+      var btn3=btn1.previousElementSibling;
+      btn1.className="follow1";
+      btn3.className="follow"
     }
+    },
   }
 };
 </script>
@@ -301,7 +315,11 @@ export default {
   width: 50px;
   height: 25px;
 }
-
+.follow1{
+  width:50px;
+  height: 25px;
+  display:none;
+}
 
 .user-photo{
   display: flex;
@@ -455,5 +473,20 @@ export default {
 }
 .margin-top-small{
   margin-top:10px;
+}
+.comment,.r-comment{
+  display: flex;
+  justify-content: space-between;
+}
+.comment img{
+  height:1.5rem;
+  width: 1.5rem;
+}
+.comment{
+  margin:1rem 0;
+  margin-bottom:0;
+}
+.r-comment{
+  width:50%;
 }
 </style>
