@@ -26,12 +26,12 @@
     <div v-if="show">
       <div class="container">
         <div class="box">
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
+          <div class="cube"><img src="../assets/1 (1).jpg" alt=""></div>
+          <div class="cube"><img src="../assets/1 (2).jpg" alt=""></div>
+          <div class="cube"><img src="../assets/1 (3).jpg" alt=""></div>
+          <div class="cube"><img src="../assets/1 (4).jpg" alt=""></div>
+          <div class="cube"><img src="../assets/1 (5).jpg" alt=""></div>
+          <div class="cube"><img src="../assets/1 (6).jpg" alt=""></div>
         </div>
       </div>
       <div class="usershows" v-for="i of 3" :key="i">
@@ -359,6 +359,11 @@ export default {
   width: 200px;
   background: #f00;
   margin-top: 0.5rem;
+}
+.cube img{
+  width:100%;
+  height:100%;
+  object-fit: cover
 }
 .box > .cube:not(:first-child) {
   margin-left: 1rem;
