@@ -22,6 +22,7 @@
       </div>
     </div>
     <div class="space1"></div>
+  <!-- 关注 -->
     <div v-if="show">
       <div class="container">
         <div class="box">
@@ -33,14 +34,11 @@
           <div class="cube"></div>
         </div>
       </div>
-      <div class="usershows" v-for="i of 3" :key="i">
+      <div class="usershows">
         <div class="userinfo">
-          <div>
-            <img class="userphoto" src="../assets/userphoto.jpeg" alt />
-            <img class="vipphoto" src="../assets/vip.png" alt />
-            <span class="username">面对疾风吧</span>
-          </div>
-
+          <img class="userphoto" src="../assets/userphoto.jpeg" alt />
+          <img class="vipphoto" src="../assets/vip.png" alt />
+          <span class="username">面对疾风吧</span>
           <img class="follow" @click="follow1" :src="follow" alt />
         </div>
         <div class="userblog">
@@ -48,20 +46,15 @@
         </div>
         <div class="userphotoblog">
           <div class="user-photo">
-            <img v-for="i of 6" :key="i" src="../assets/userphoto.jpeg" alt />
+            <img v-for="i of 5" :key="i" src="../assets/userphoto.jpeg" alt />
+            
           </div>
-        </div>
-        <div class="comment">
-          <img src="../assets/share.png" alt />
-          <div class="right_comment">
-            <img src="../assets/comment.png" alt />
-            <img src="../assets/star.png" alt />
-            <img src="../assets/zan.png" alt />
-          </div>
+         
         </div>
       </div>
-    </div>
 
+      
+    </div>
     <!-- 推荐面板 -->
     <div v-if="show1">
       <!-- 圆形图标 -->
@@ -101,31 +94,32 @@
       <!-- 推荐页主要内容 -->
       <div class="r-usershow">
         <div class="r-show">
+
           <div class="usershow-item">
-            <img src="../assets/userphoto.jpeg" alt />
+            <img src="../assets/userphoto.jpeg" alt="">
             <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
             <div class="praise">
               <div class="user-img">
-                <img src="../assets/userphoto.jpeg" alt />
+                <img src="../assets/userphoto.jpeg" alt="">
                 <span class="my-small">Leo</span>
               </div>
               <div class="star">
-                <img src="../assets/star.png" alt />
+                <img src="../assets/star.png" alt="">
                 <span class="my-small">123</span>
               </div>
             </div>
           </div>
 
           <div class="usershow-item">
-            <img src="../assets/usershow.png" alt />
+            <img src="../assets/usershow.png" alt="">
             <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
             <div class="praise">
               <div class="user-img">
-                <img src="../assets/userphoto.jpeg" alt />
+                <img src="../assets/userphoto.jpeg" alt="">
                 <span class="my-small">Leo</span>
               </div>
               <div class="star">
-                <img src="../assets/star.png" alt />
+                <img src="../assets/star.png" alt="">
                 <span class="my-small">123</span>
               </div>
             </div>
@@ -133,30 +127,30 @@
         </div>
         <div class="r-show">
           <div class="usershow-item">
-            <img src="../assets/usershow.png" alt />
+            <img src="../assets/usershow.png" alt="">
             <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
             <div class="praise">
               <div class="user-img">
-                <img src="../assets/userphoto.jpeg" alt />
+                <img src="../assets/userphoto.jpeg" alt="">
                 <span class="my-small">Leo</span>
               </div>
               <div class="star">
-                <img src="../assets/star.png" alt />
+                <img src="../assets/star.png" alt="">
                 <span class="my-small">123</span>
               </div>
             </div>
           </div>
 
           <div class="usershow-item">
-            <img src="../assets/userphoto.jpeg" alt />
+            <img src="../assets/userphoto.jpeg" alt="">
             <p class="user-title">长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有 长得帅老的快,长得丑遍地走,你问我有没有,嘿,我还真没有</p>
             <div class="praise">
               <div class="user-img">
-                <img src="../assets/userphoto.jpeg" alt />
+                <img src="../assets/userphoto.jpeg" alt="">
                 <span class="my-small">Leo</span>
               </div>
               <div class="star">
-                <img src="../assets/star.png" alt />
+                <img src="../assets/star.png" alt="">
                 <span class="my-small">123</span>
               </div>
             </div>
@@ -167,24 +161,21 @@
     <!-- 收藏夹 -->
     <div v-if="show2" class="favorite">
       <div class="card-item" v-for="i of 6" :key="i">
-        <img class="card-img" src="../assets/usershow.png" alt />
+        <img class="card-img" src="../assets/usershow.png" alt="">
         <span class="my-small">56个灵感</span>
-        <p
-          class="comment-font"
-        >Lorem ipsum dolor sit ame Similique iste odio neam commodi quas adipisci eos, assumenda recusandae?</p>
+        <p class="comment-font">Lorem ipsum dolor sit ame Similique iste odio neam commodi quas adipisci eos, assumenda recusandae?</p>
         <div class="praise margin-top-small">
-          <div class="user-img">
-            <img src="../assets/userphoto.jpeg" alt />
-            <span class="my-small">Leo</span>
-          </div>
-          <div class="star">
-            <img src="../assets/favorite.png" alt />
-            <span class="my-small">收藏夹</span>
-          </div>
-        </div>
+              <div class="user-img">
+                <img src="../assets/userphoto.jpeg" alt="">
+                <span class="my-small">Leo</span>
+              </div>
+              <div class="star">
+                <img src="../assets/favorite.png" alt="">
+                <span class="my-small">收藏夹</span>
+              </div>
+            </div>
       </div>
     </div>
-    <div class="space1"></div>
   </div>
 </template>
 <script>
@@ -192,7 +183,6 @@ export default {
   data() {
     return {
       follow: require("../assets/follow.png"),
-      hasfollow:require("../assets/follow.png"),
       active: 0,
       show: true,
       show1: false,
@@ -219,12 +209,11 @@ export default {
       }
     },
 
-    follow1(e) {
-      var btn=e.target;
-      console.log(btn);
-      if(e.target.src=="../assets/follow.png"){
-        e.target.src="../assets/follow.png"
-        
+    follow1() {
+      if (this.follow == require("../assets/follow.png")) {
+        this.follow = require("../assets/hasfollowed.png");
+      } else {
+        this.follow = require("../assets/follow.png");
       }
     }
   }
@@ -301,26 +290,27 @@ export default {
 .vipphoto {
   width: 12px;
   height: 12px;
-  margin-top: 1rem;
-  margin-left: -0.5rem;
+  margin-left: -170px;
+  margin-top: 15px;
 }
 .username {
   font-size: 16px;
-  margin-left: 1rem;
+  margin-left: -150px;
 }
 .follow {
   width: 50px;
   height: 25px;
 }
 
-.user-photo {
+
+.user-photo{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .userphotoblog img {
-  height: 33%;
-  width: 33%;
+  height:33%;
+  width:33%;
   margin-bottom: 0.4rem;
 }
 .usershows {
@@ -398,84 +388,70 @@ export default {
 .circle > img {
   width: 3.6rem;
 }
-.r-usershow {
+.r-usershow{
   display: flex;
-  padding: 1rem;
+  padding:1rem;
   justify-content: space-between;
-  border-top: 1px solid #e9e9e9;
+  border-top:1px solid #e9e9e9;
 }
-.r-show {
-  width: 49%;
+.r-show{
+  width:49%;
 }
-.usershow-item {
-  margin-bottom: 1rem;
+.usershow-item{
+  margin-bottom:1rem;
 }
-.usershow-item > img {
-  width: 100%;
+.usershow-item>img{
+  width:100%;
 }
-.user-title {
-  font: 0.8rem 苹方-简;
-  max-height: 3rem;
-  padding: 0.5rem 0;
+.user-title{
+  font:0.8rem 苹方-简;
+  max-height:3rem;
+  padding:0.5rem 0;
   overflow: hidden;
 }
-.praise {
+.praise{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.user-img > img {
-  width: 1.3rem;
-  border-radius: 100%;
-  margin-right: 5px;
+.user-img>img{
+  width:1.3rem;
+  border-radius:100%;
+  margin-right:5px;
 }
-.my-small {
-  font: 0.8rem 苹方-简;
+.my-small{
+  font:0.8rem 苹方-简;
 }
-.star > img {
-  width: 1rem;
+.star>img{
+  width:1rem;
 }
-.favorite {
-  background: #f5f5f5;
-  padding: 1rem;
+.favorite{
+  background:#f5f5f5;
+  padding:1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.card-item {
-  width: 49%;
-  height: 260px;
-  background: white;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
+.card-item{
+  width:49%;
+  height:260px;
+  background:white;
+  margin-bottom:0.5rem;
+  padding:0.5rem;
 }
-.card-img {
-  height: 150px;
-  width: 100%;
+.card-img{
+  height:150px;
+  width:100%;
   object-fit: cover;
 }
-.comment-font {
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  height: 38px;
+.comment-font{
+  font-size:14px;
+  color:#000;
+  margin:0;
+  height:38px;
   overflow: hidden;
 }
-.margin-top-small {
-  margin-top: 10px;
+.margin-top-small{
+  margin-top:10px;
 }
-.comment {
-  display: flex;
-  justify-content: space-between;
-  padding:1rem;
-}
-.right_comment{
-  width:50%;
-  display: flex;
-  justify-content: space-between;
-}
-.comment img{
-  width:1.5rem;
-}
-
 </style>

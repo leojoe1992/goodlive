@@ -9,7 +9,11 @@
       </mt-tab-container-item>
       <mt-tab-container-item id="add">第三页</mt-tab-container-item>
       <mt-tab-container-item id="shopping">第四页</mt-tab-container-item>
-      <mt-tab-container-item id="me">第五页</mt-tab-container-item>
+      <mt-tab-container-item id="me">
+      
+       <me></me>
+			
+        </mt-tab-container-item>
     </mt-tab-container>
     <mt-tabbar v-model="active" fixed>
       <mt-tab-item id="home" @click.native="changeState(0)">
@@ -54,6 +58,9 @@
  
 import Tablebaricon from "./Tablebaricon";
 import Firsttab from "./Firsttab";
+//Me部分
+import Me from "./Me/Me"
+
 export default {
   data() {
     return {
@@ -89,6 +96,9 @@ export default {
   components:{
     "tabbaricon":Tablebaricon,
     "ft":Firsttab,
+    //Me部分
+    "me": Me,
+		
   }
 }
 </script>
