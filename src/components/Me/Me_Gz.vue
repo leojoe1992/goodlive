@@ -1,6 +1,6 @@
 <template>
 	<div>
-			
+			<!-- ME-NAV -->
      <div class="Me_nav"> 
        <div>
 			  <img @click="jump" src="@/assets/Me_Ding.png" alt="">
@@ -21,11 +21,48 @@
 		<div style="height:70px;"></div>
     <!-- 关注的内容 -->
 		  <div v-if="show1">
-				
-				<div class="Me_gFlex">
+				<!-- 推荐关注 -->
+			
+				<router-link :to="'/MeGu'" class="Me_gFlex">
 					<div class="Me_gFlex2">
 						<img src="@/assets/Me_GZ.png" alt="">
-						<div><h5>推荐关注eytrhththytshy</h5></div>
+
+						<div class="GZ_text"><h5>推荐关注</h5></div>
+					</div>
+					<div>
+						 <img src="@/assets/Me_JT2.png" alt="">
+					</div>
+				</router-link>
+					
+       <!-- 官方 -->
+				<div class="Me_gFlex">
+					<div class="Me_gFlex2">
+						<img class="Me_Tx" src="@/assets/Me_02.png" alt="">
+
+						<div class="GZ_text">
+							 
+							<h5>好好住
+								<img class="Me_v" src="@/assets/Me_V.png" alt="">
+							</h5>
+							<h5>北京&nbsp;&nbsp;朝阳</h5>
+						</div>
+					</div>
+					<div>
+						 <img src="@/assets/Me_JT2.png" alt="">
+					</div>
+				</div>
+      <!-- 星探 -->
+         <div class="Me_gFlex">
+					<div class="Me_gFlex2">
+						<img class="Me_Tx" src="@/assets/Me_LuFei.jpg" alt="">
+
+						<div class="GZ_text">
+							 
+							<h5>好好住星探
+								<img class="Me_v" src="@/assets/Me_V.png" alt="">
+							</h5>
+							<h5>北京&nbsp;&nbsp;朝阳</h5>
+						</div>
 					</div>
 					<div>
 						 <img src="@/assets/Me_JT2.png" alt="">
@@ -33,15 +70,7 @@
 				</div>
 
 			</div>
-			<div class="Me_gFlex">
-					<div class="Me_gFlex2">
-						<img src="@/assets/Me_GZ.png" alt="">
-						<div><h5>推荐关注eytrhththytshy</h5></div>
-					</div>
-					<div>
-						 <img src="@/assets/Me_JT2.png" alt="">
-					</div>
-				</div>
+		
 			
 			 <div v-if="show2">
 			  4545645656
@@ -71,13 +100,16 @@ export default {
 		},
 	}
 }
-
 </script>
 <style scoped>
+.GZ_text>h5>.Me_v{
+	width: 1.3rem;
+	margin-left:0rem; 
+}
 /*图片大小*/
  .Me_nav img{
 	 width: 30px;
-	 margin-left:1rem; 
+	 margin-left:1rem;
  }
  /*nav的外层父元素*/
  .Me_nav{
@@ -97,7 +129,6 @@ export default {
 	 width: 280px;
 	 text-align:center;
  }
- 
  ul>li{
 	 font-size: 1.3rem;
 	 margin-top:0.5rem;
@@ -112,6 +143,11 @@ export default {
 	 width: 35px;
 	 border-radius: 0.3rem;
  }
+ /*头像圆型*/
+ .Me_gFlex>div>img.Me_Tx{
+  border-radius: 1rem;
+ }
+ 
  .Me_gFlex{
 	 display:flex;
    justify-content: space-around;
@@ -126,4 +162,8 @@ export default {
 	 justify-content: space-around;
 	 width: 200px;
  }
+ .GZ_text{
+	 width:8rem;
+ }
+ 
 </style>

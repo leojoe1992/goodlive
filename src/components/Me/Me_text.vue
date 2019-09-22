@@ -90,9 +90,10 @@
 export default {
   data(){
     return{
-      list:[]
+      list:[],
     }
-  }
+  },
+  
 }
 </script>
 <style scoped>

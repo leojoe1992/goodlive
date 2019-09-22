@@ -69,7 +69,7 @@ export default {
 	 methods:{
 		 jump() {
 		 console.log(123);
-		 this.$router.push("/Me");
+		 this.$router.push("/");
 	 },
 		 change(i) {
 			 if(i==0){

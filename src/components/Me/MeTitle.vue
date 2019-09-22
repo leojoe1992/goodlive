@@ -44,8 +44,8 @@
     </div>
     </div>
 </div>
- 
-  
+
+
 	
 </template>
 <script>
@@ -54,7 +54,8 @@ export default {
   fristImg:{default:""},
 	middleImg:{default:""},
 	endImg:{default:""}, 
-  hongDian:{default:""}
+  hongDian:{default:""},
+  
 	}
 }
 </script>
