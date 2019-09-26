@@ -6,6 +6,7 @@ const bodyParser=require("body-parser");
 //导入路由器
 const search=require("./routes/search")
 const detail=require("./routes/detail")
+const user=require("./routes/user")
 
 var app=express();
 var server=app.listen(8080)//部署服务器监听8000
@@ -20,4 +21,5 @@ app.use(express.static('public'));
 
 // 挂载路由
 app.use("/search",search);
-app.use("/detail",detail)
+app.use("/detail",detail);
+app.use("/user",user);

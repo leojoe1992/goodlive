@@ -20,6 +20,30 @@ INSERT INTO product_family VALUES(50,'架子');
 INSERT INTO product_family VALUES(60,'椅子');
 INSERT INTO product_family VALUES(70,'凳子');
 INSERT INTO product_family VALUES(80,'屏风');
+#创建表zfb_reg 用户注册表
+USE goodlive;
+CREATE TABLE goodlive_reg(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(50),
+  upwd VARCHAR(32),
+  email VARCHAR(32),
+  phone VARCHAR(11)
+);
+#功能1:添加二条测试数据
+INSERT INTO goodlive_reg VALUES(null,'LQX',md5('456'),"1369184393@qq.com",'15918610972');
+
+创建表xz_login 用户登录表
+USE goodlive;
+CREATE TABLE goodlive_login(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  uname VARCHAR(50),
+  upwd  VARCHAR(32)
+);
+#功能二:添加二条测试数据 
+INSERT INTO goodlive_login VALUES(null,'tom',md5('123'));
+INSERT INTO goodlive_login VALUES(null,'jerry',md5('123'));
+INSERT INTO goodlive_login VALUES(null,'LQX',md5('456'));
+
 
 #创建保存商品详情数据的表
 CREATE TABLE product_list( 

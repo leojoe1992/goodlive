@@ -15,9 +15,11 @@ import MeDing from "./components/Me/MeDing"
 import MeJF from "./components/Me/Me_Jf"
 import MeGZ from "./components/Me/Me_Gz"
 import MeGuan from "./components/Me/Me_Gu"
+import MeLogin from "./components/Me/Me_Login"
 Vue.use(Router)
 export default new Router({
   routes: [
+    {path:'/MeLogin',component:MeLogin},
     {path:'/MeGu',component:MeGuan},
     {path:'/MeG',component:MeGZ},
     {path:'/MeJF',component:MeJF},
