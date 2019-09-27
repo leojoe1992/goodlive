@@ -1,7 +1,7 @@
 <template>
   <div>
 	  <!-- 导航栏tableBar -->
-		<div class="page-head">
+		<div class="page-head" ref="toTop">
       <div>
         <router-link :to="'/MeG'" >
        <img :src="fristImg" alt="">
@@ -23,7 +23,7 @@
     <div class="Me_bg">
       <div style="height:80px;"></div>
       <!-- 人物头像左边的图片 -->
-      <div class="my_LuFei">
+      <div class="my_LuFei" ref="toTop2">
         <router-link :to="'/'">
         <img src="@/assets/Me_LuFei.jpg" alt="" class="bg_img">
         </router-link>
@@ -50,6 +50,35 @@
 </template>
 <script>
 export default {
+   data() {
+    return{
+      scrollTop:0
+    }
+  },
+   methods:{
+     scroll() {
+    window.onscroll=()=>{
+      var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+     // console.log(scrollTop);
+      if(scrollTop>=100) {
+     this.$refs.toTop.style.backgroundColor="rgba(94,174,221,1)";
+    this.$refs.toTop2.style.display="none";
+    this.$refs.toTop.style.transition= "all 0.5s linear";
+      this.$refs.toTop2.style.transition= "all 0.5s linear";
+     }else{
+       this.$refs.toTop.style.backgroundColor="rgba(94,174,221,0.1)";
+      this.$refs.toTop2.style.display="";
+  }
+    }  
+     }
+   },
+   props:["place"],
+   created() {
+     this.scroll();
+   },
+   mounted() {
+
+   },
 	props:{  //声明父组件接收的数据
   fristImg:{default:""},
 	middleImg:{default:""},
