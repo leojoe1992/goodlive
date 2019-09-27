@@ -96,7 +96,7 @@ export default {
 	align-items: center;
 	width:100%;
 	height:70px;
-  background-color:rgba(94,174,221,0.1);
+  /* background-color:rgba(94,174,221,0.1); */
   z-index: 999px;
 	position: fixed;
 }
